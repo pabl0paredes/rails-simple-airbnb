@@ -1,0 +1,8 @@
+<%= simple_form_for [@flat] do |f| %>
+    <%= f.input :name %>
+    <%= f.input :address %>
+    <%= f.input :description %>
+    <%= f.input :number_of_guests, as: :select, collection: (1..10).to_a %>
+    <%= f.input :price_per_night %>
+    <%= f.submit "Create flat", class: "btn btn-primary" %> <%= link_to "Cancel", flats_path, class: "btn btn-danger" %>
+  <% end %>

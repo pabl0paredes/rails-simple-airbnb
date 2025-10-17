@@ -1,0 +1,14 @@
+<%= render "shared/navbar" %>
+<h1>All our flats (<%= @flats.length %>)</h1>
+<div class="d-flex">
+  <% @flats.each do |flat| %>
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title"><%= flat.name %></h5>
+      <h6 class="card-subtitle mb-2 text-muted"><%= flat.address %></h6>
+      <p class="card-text"><i class="fa-solid fa-users"></i> <%= flat.number_of_guests %> <i class="fa-solid fa-euro-sign"></i><%= flat.price_per_night %></p>
+      <%= link_to "More info", flat_path(flat) %>
+    </div>
+  </div>
+  <% end %>
+</div>

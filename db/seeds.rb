@@ -7,3 +7,36 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+puts "Creando departamentos test..."
+
+Flat.create!(
+  name: 'Light & Spacious Garden Flat London',
+  address: '10 Clifton Gardens London W9 1DT',
+  description: 'A lovely summer feel for this spacious garden flat. Two double bedrooms, open plan living area, large kitchen and a beautiful conservatory',
+  price_per_night: 75,
+  number_of_guests: 3
+)
+Flat.create!(
+  name: 'Departamento kisito en el bella',
+  address: 'Antonia Lopez de Bello 80, Recoleta',
+  description: 'Para parejas que quieren disfrutar de una noche tranquila',
+  price_per_night: 45,
+  number_of_guests: 2
+)
+Flat.create!(
+  name: 'Departamento familiar a la orilla del lago',
+  address: 'Ensenada 320, Puerto Varas',
+  description: 'Goce de una fabuloa estadía con espacios amplios y tinaja al aire libre',
+  price_per_night: 180,
+  number_of_guests: 8
+)
+Flat.create!(
+  name: 'Donde Armandito',
+  address: 'Le Wagon 420, Buenos Aires',
+  description: 'Para recibir a todos nuestro compañeros del batch 2068',
+  price_per_night: 10,
+  number_of_guests: 8
+)
+
+puts "4 departamentos creados!"
